@@ -66,6 +66,7 @@ URL: http://localhost:8080/alculadora/multiplicar?a=&b=
 ```bash
 GET http://localhost:8080/calculadora/multiplicar?a=5&b=3
 ```
+
 ![img_2.png](img/img_2.png)
 
 
@@ -79,12 +80,14 @@ URL: http://localhost:8080/alculadora/dividir?a=&b=
 ```bash
 GET http://localhost:8080/calculadora/dividir?a=10&b=2
 ```
+
 ![img.png](img/img.png)
 
 **Exemplo 2:**
 ```bash
 GET http://localhost:8080/calculadora/dividir?a=10&b=0
 ```
+
 ![img_1.png](img/img_1.png)
 
 ## 🧭 2. Teste Exploratório
@@ -105,6 +108,7 @@ URL: http://localhost:8080/usuario
   "idade": 20
 }
 ```
+
 ![img_3.png](img/img_3.png)
 
 **Exemplo de corpo malformado (erro proposital):**
@@ -114,7 +118,9 @@ URL: http://localhost:8080/usuario
   "email": "gioTomacelli@gmail.com",
 }
 ```
+
 ![img_4.png](img/img_4.png)
+
 Comportamento esperado:
 ➡️ 400 Bad Request — o Spring rejeita o JSON inválido automaticamente.
 
@@ -128,6 +134,7 @@ Método: GET
 URL: http://localhost:8080/produtos
 
 **Exemplo:**
+
 ![img_5.png](img/img_5.png)
 Validação: Verifique se todos os produtos estão sendo listados corretamente.
 
@@ -137,13 +144,17 @@ Avaliar o tempo de resposta da API em chamadas repetidas ao endpoint /status, ob
 
 ### 🔹 Endpoint: /status
 
-Método: GET
+Método: GET 
 URL: http://localhost:8080/status
 
 **Exemplos:**
+
 ![img_6.png](img/img_6.png)
+
 ![img_7.png](img/img_7.png)
+
 ![img_8.png](img/img_8.png)
+
 ### 📈 Análise esperada
 - Variações pequenas (ex: 45ms a 70ms) são normais.
 - Oscilações maiores podem indicar problemas de desempenho ou sobrecarga no servidor.
@@ -159,4 +170,5 @@ Parâmetro: delay = (em segundos)
 URL: http://localhost:8080/lento?delay=5
 
 **Exemplo:**
+
 ![img_9.png](img/img_9.png)
